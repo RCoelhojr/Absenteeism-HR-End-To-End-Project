@@ -1,35 +1,31 @@
 # Absenteeism-HR-End-To-End-Project
 
-
-# ETL and Power BI Dashboard Creation
-
-This repository outlines the process of extracting, transforming, and loading (ETL) data from a SQL Server database into Power BI for dashboard creation. Below, we describe the steps and key SQL queries used in the ETL process, focusing on employee absenteeism data. The final product is a dashboard that analyzes various factors influencing absenteeism and employee well-being.
 #Table of Contents
 
-###ETL Process Overview
-###Key SQL Queries
-###Create a Join Table
-###Identify the Healthiest Employees
-###Compensation for Non-Smokers
-###Optimized Query for Data Transformation
-###Data Loading into Power BI
-###Dashboard Creation
+### ETL Process Overview
+### Key SQL Queries
+### Create a Join Table
+### Identify the Healthiest Employees
+### Compensation for Non-Smokers
+### Optimized Query for Data Transformation
+### Data Loading into Power BI
+### Dashboard Creation
 
-#Extract
+# Extract
 The data is sourced from several tables in SQL Server, including Absenteeism_at_work, compensation, and Reasons. These tables contain detailed information about employees, their absenteeism records, compensation, and the reasons for their absences.
 
-#Transform
+# Transform
 Data is cleaned and transformed using SQL queries to merge relevant information, categorize employees based on health and absenteeism metrics, and prepare it for loading into Power BI. The key transformations include joining tables, filtering the healthiest employees, and calculating compensation adjustments.
 
-#Load
+# Load
 The transformed data is then loaded into Power BI, where we create various visualizations to analyze absenteeism patterns, health metrics, and financial impacts on the organization.
 
-#Key SQL Queries
+# Key SQL Queries
 1. Create a Join Table
 This query joins the tables Absenteeism_at_work, compensation, and Reasons to create a unified dataset with information on employees, absenteeism causes, and compensation details.
 
 
-SELECT * 
+ SELECT * 
 FROM Absenteeism_at_work a
 LEFT JOIN compensation b ON a.ID = b.ID
 LEFT JOIN Reasons r ON a.Reason_for_absence = r.Number;
@@ -65,7 +61,7 @@ WHERE Social_smoker = 0;
 This query optimizes the dataset by categorizing the body mass index (BMI), mapping months to seasons, and classifying education levels.
 
 
-SELECT
+ SELECT
     a.ID,
     r.Reason,
     Month_of_absence,
@@ -102,19 +98,20 @@ FROM Absenteeism_at_work a
 LEFT JOIN compensation b ON a.ID = b.ID
 LEFT JOIN Reasons r ON a.Reason_for_absence = r.Number;
 
-#Data Loading into Power BI
+# Data Loading into Power BI
 Once the data is prepared using the SQL queries above, the next step is to load it into Power BI:
 Connect Power BI to the SQL Server database.
 Import the transformed data.
 Perform any additional transformations or calculations required for visualization.
 
-#Dashboard Creation
+# Dashboard Creation
 After loading the data, we can create various visuals in Power BI to help stakeholders understand absenteeism trends and employee well-being. Some suggested visuals include:
 
 Bar charts showing absenteeism reasons by season.
 Scatter plots to explore the relationship between absenteeism time and transportation expenses.
 Pie charts illustrating the distribution of employees by BMI category or education level.
 KPI visuals to display key metrics such as the average absenteeism time or the budget impact of compensation increases for non-smokers.
-Conclusion
+
+# Conclusion
 This project outlines the full ETL process, from data extraction and transformation in SQL Server to dashboard creation in Power BI. The data is used to analyze absenteeism, employee health, and compensation strategies, providing actionable insights for organizational decision-making.
 
