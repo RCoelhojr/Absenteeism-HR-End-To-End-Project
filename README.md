@@ -1,6 +1,6 @@
 # Absenteeism-HR-End-To-End-Project
 
-#Table of Contents
+# Table of Contents
 
 ### ETL Process Overview
 ### Key SQL Queries
