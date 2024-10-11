@@ -110,11 +110,16 @@ LEFT JOIN Reasons r ON a.Reason_for_absence = r.Number;
 ### Data Loading into Power BI
 Once the data is prepared using the SQL queries above, the next step is to load it into Power BI:
 
-#### Connect Power BI to the SQL Server database.
+#### Connect Power BI to the SQL Server database
 Import the transformed data.
 Perform any additional transformations or calculations required for visualization.
 Dashboard Creation
 After loading the data, we can create various visuals in Power BI to help stakeholders understand absenteeism trends and employee well-being. Some suggested visuals include:
+
+#### Dashboard Overview
+
+![Alt text](https://github.com/RCoelhojr/Absenteeism-HR-End-To-End-Project/blob/main/Files/Dashboard-Image.png)
+
 
 ## Conclusion
 This project outlines the full ETL process, from data extraction and transformation in SQL Server to dashboard creation in Power BI. The data is used to analyze absenteeism, employee health, and compensation strategies, providing actionable insights for organizational decision-making.
