@@ -8,7 +8,7 @@
   - [Compensation for Non-Smokers](#compensation-for-non-smokers)
   - [Optimized Query for Data Transformation](#optimized-query-for-data-transformation)
 - [Data Loading into Power BI](#data-loading-into-power-bi)
--  [DDashboard Overview](#dashboard-overview)
+-  [Dashboard Overview](#dashboard-overview)
 -  [Conclusion](#conclusion)
 
 ---
