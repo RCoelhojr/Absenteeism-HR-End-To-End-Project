@@ -92,7 +92,7 @@ SELECT
         WHEN Education IN (1) THEN 'Bachelors'
         WHEN Education IN (2) THEN 'High School Graduate'
         WHEN Education IN (3) THEN 'Masters'
-        WHEN Education IN (4) THEN 'Doctorate or above'
+        WHEN Education IN (4) THEN 'Doctorate or Above'
         ELSE 'Unknown'
     END AS Education_levels,
     Day_of_the_week,
