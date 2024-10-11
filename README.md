@@ -117,11 +117,6 @@ Perform any additional transformations or calculations required for visualizatio
 Dashboard Creation
 After loading the data, we can create various visuals in Power BI to help stakeholders understand absenteeism trends and employee well-being. Some suggested visuals include:
 
-### Bar charts showing absenteeism reasons by season.
-Scatter plots to explore the relationship between absenteeism time and transportation expenses.
-Pie charts illustrating the distribution of employees by BMI category or education level.
-KPI visuals to display key metrics such as the average absenteeism time or the budget impact of compensation increases for non-smokers.
-
 ## Conclusion
 This project outlines the full ETL process, from data extraction and transformation in SQL Server to dashboard creation in Power BI. The data is used to analyze absenteeism, employee health, and compensation strategies, providing actionable insights for organizational decision-making.
 
