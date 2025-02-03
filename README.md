@@ -28,7 +28,7 @@ The transformed data is then loaded into Power BI, where we create various visua
 
 ## Key SQL Queries
 
-### 1. Create a Join Table
+### Create a Join Table
 This query joins the tables `Absenteeism_at_work`, `compensation`, and `Reasons` to create a unified dataset with information on employees, absenteeism causes, and compensation details.
 
 ```sql
@@ -38,7 +38,7 @@ LEFT JOIN compensation b ON a.ID = b.ID
 LEFT JOIN Reasons r ON a.Reason_for_absence = r.Number;
 ```
 
-### 2. Identify the Healthiest Employees
+### Identify the Healthiest Employees
 To find the healthiest employees, we filter based on several criteria:
 
 Non-drinkers (Social_drinker = 0)
@@ -55,7 +55,7 @@ WHERE Social_drinker = 0
   AND Absenteeism_time_in_hours < (SELECT AVG(Absenteeism_time_in_hours) FROM Absenteeism_at_work);
 ```
 
-### 3. Compensation for Non-Smokers
+### Compensation for Non-Smokers
 To plan for a compensation increase for non-smokers, we calculate the number of non-smokers, which is used for financial budgeting. Based on the total budget and the planned compensation increase per hour, we calculate the yearly cost.
 
 -- Count the number of non-smokers
@@ -67,7 +67,7 @@ WHERE Social_smoker = 0;
 
 -- The budget for non-smoker compensation is 983,221, allowing a 0.68 per hour increase, or 1,414.4 per year.
 
-### 4. Optimized Query for Data Transformation
+### Optimized Query for Data Transformation
 This query optimizes the dataset by categorizing the body mass index (BMI), mapping months to seasons, and classifying education levels.
 
 ```sql
