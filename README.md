@@ -120,7 +120,7 @@ After loading the data, we can create various visuals in Power BI to help stakeh
 
 #### Dashboard Overview
 
-![Alt text]((https://github.com/RCoelhojr/Absenteeism-HR-End-To-End-Project/blob/main/Files/Dashboard-Image.png))
+[Alt text](https://github.com/RCoelhojr/Absenteeism-HR-End-To-End-Project/blob/main/Files/Dashboard-Image.png)
 
 
 ## Conclusion
